@@ -1,7 +1,8 @@
 
 
-let citi = document.querySelector(".citi")
-
+const citi = document.querySelector(".citi")
+const nameCIti = document.querySelector(".nameCIti")
+const main = document.querySelector(".main")
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(positionCiti);
@@ -28,7 +29,14 @@ fetch(apiKey)
 .then(data => {
   console.log(data);
   citi.innerHTML = data.coord.lat
-
+  nameCIti.innerHTML = data.name
+  const arrDeg = data.weather[0]
+  for(deg in arrDeg){
+   
+    console.log(arrDeg[deg]);
+  }
+  console.log(arrDeg.main);
+console.log(arrDeg);
   
 })
 .catch(error => {
