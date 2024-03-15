@@ -156,7 +156,7 @@ body {
 }
 
 .icons {
-  opacity: 0;
+  opacity: 1;
 }
 
 .icons.fadeIn {
